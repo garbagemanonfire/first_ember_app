@@ -29,3 +29,14 @@ test("/", function() {
     equal(find("li").length, 2, "There are two items in the list");
   });
 });
+
+test("about", function() {
+  visit("/");
+  // $("About").click
+
+  andThen(function() {
+    equal(find("div:first").hasClass("about"), true, "Application about page div 1 is rendered");
+  });
+});
+
+
